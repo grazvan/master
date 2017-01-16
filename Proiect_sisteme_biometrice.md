@@ -136,6 +136,10 @@ int OutputInit()
     return fdo;
 }
 
+```
+- print out the event using our new input device
+
+```python
 void KeyPrint(int fdo, struct input_event ev)
 {
     ev.time.tv_sec = 0;
@@ -145,6 +149,10 @@ void KeyPrint(int fdo, struct input_event ev)
             ExitProgram("Error: while writing event");
 }
 
+```
+- main routine 
+
+```python
 int main(int argc, char* argv[])
 {
     int    fdo, fdi;
